@@ -1,6 +1,6 @@
 {
   "name": "points-to-vertices",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": ":white_square_button: a points to vertices array convertor",
   "main": "cjs/index.js",
   "browser": "dist/pointsToVertices.js",
