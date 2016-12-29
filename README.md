@@ -15,7 +15,29 @@
 ```js
 import pointsToVertices from 'points-to-vertices';
 
+const points = [
+  {
+    x: 1,
+    y: 1,
+    z: 1,
+    color: `rgba(255, 0, 0, .3)`
+  },
+  {
+    x: 1,
+    y: - 1,
+    z: 0,
+    color: `#FF0000`
+  }
+];
+
+const vertices = pointsToVertices(points);
+console.log(vertices);
+// > [1, 1, 1,  1, 0, 0, .3,  1, -1, 0,  1, 0, 0, 1]
+
 ```
+
+Each point can have **x, y, z and color** (vec4, hex, rgb or rgba) properties
+<br/>`points-to-vertices` fills in the blanks with (provided) defaults.
 
 ### Installation
 
@@ -30,31 +52,95 @@ or npm
 
 ### configuration
 
-You can pass in extra options as a configuration object (➕ required, ➖ optional, ✏️ default).
+You can pass in extra options as a configuration object *(all parameters are optional)*
 
 ```js
 import pointsToVertices from 'points-to-vertices';
 
+const points = [
+  {
+    x: 1,
+    y: 1,
+    z: -1,
+    color: `rgba(255, 0, 0, .3)`
+  },
+  {
+    x: 1,
+    y: - 1,
+  }
+];
+
+const vertices = pointsToVertices(points, {
+  meta: true, // wrap the data in an object
+  color: false // no colors in result vertices array, only points
+  dx: 1, // default x
+  dy: 1, // default y
+  dz: - 1, // default z
+  dcolor: `#FFFF00` // default color
+});
+
 ```
 
-➖ **property** ( type ) ` ✏️ default `
-<br/> 📝 description
-<br/> ❗️ warning
-<br/> ℹ️ info
-<br/> 💡 example
+➖ **color** ( boolean ) ` ✏️ true `
+<br/> 📝 output colors in vertices array
+<br/> ℹ️ `false` => `[x, y, z]` vertex
+<br/> ℹ️ `true` =>  `[x, y, z, r, g, b, a]` vertex (default)
 
-### methods
+➖ **meta** ( boolean ) ` ✏️ false `
+<br/> 📝 wrap the result in an object (with a meta property)
+<br/> ℹ️ returns extra info on vertices, start and end of position, color, total length
+<br/> ℹ️ `meta: false` returns a simple vertices array
 
-#### #name
+example output with `meta: true` (annotated for clarity)
 
 ```js
-pointsToVertices
-
+{
+ 
+  vertices: [ 
+  
+  	// point 1
+  	0, 0, 1,     // position (x, y, z)
+  	0, 1, 1, 1,  // color (r, g, b, a)
+  	
+  	// point 2
+  	1, - 1, 0,    // position (x, y, z)
+  	0, 1, 1, 1   // color (r, g, b, a)
+  	
+  ],
+  
+  meta: { 
+  
+   	// each vertex is 7 long
+   	length: 7,    	
+   	
+   	// position is 3 long, starts at index 0
+    position: { start: 0, length: 3 }, 
+    
+    // color is 4 long, starts at index 3
+    color: { start: 3, length: 4 }   
+  } 
+  
+}
 ```
+
+**you can pass in default values for x, y, z and color**
+<br/> if no value is set for x, y, z, or color, `points-to-vertices` will use the default
+
+➖ **dx** ( number ) ` ✏️ 0 `
+<br/> 📝 default x for a vertex
+
+➖ **dy** ( number ) ` ✏️ 0 `
+<br/> 📝 default y for a vertex
+
+➖ **dz** ( number ) ` ✏️ 0 `
+<br/> 📝 default z for a vertex
+
+➖ **dcolor** ( vec4 | string ) ` ✏️ [0, 0, 0, 1] (black) `
+<br/> 📝 default z for a vertex
 
 ### Examples
 
-See [`example`](example/script.js) folder or the [runkit](https://runkit.com/duivvv/points-to-vertices) example.
+See [`example`](example/script.js) folder
 
 ### Builds
 
