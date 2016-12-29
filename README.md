@@ -59,13 +59,13 @@ import pointsToVertices from 'points-to-vertices';
 
 const points = [
   {
-    x: 1,
-    y: 1,
-    z: -1,
+    x: -1,
+    y: 0,
+    z: 0,
     color: `rgba(255, 0, 0, .3)`
   },
   {
-    x: 1,
+    x: 0,
     y: - 1,
   }
 ];
