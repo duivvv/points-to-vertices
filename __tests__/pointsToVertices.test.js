@@ -141,10 +141,11 @@ describe(`returns metadata`, () => {
     ];
 
     const data = {
-      vertices: [1, 1, 0, 0, 0, 1],
+      data: [1, 1, 0, 0, 0, 1],
       meta: {
         position: {start: 0, length: 3},
-        length: 3
+        vertexLength: 3,
+        amount: 2
       }
     };
 
@@ -175,11 +176,12 @@ describe(`returns metadata`, () => {
     ];
 
     const data = {
-      vertices: [1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, .5, 0, 1, 0, 0, 0, 0, 1],
+      data: [1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, .5, 0, 1, 0, 0, 0, 0, 1],
       meta: {
         position: {start: 0, length: 3},
         color: {start: 3, length: 4},
-        length: 7
+        vertexLength: 7,
+        amount: 3
       }
     };
 

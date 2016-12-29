@@ -39,10 +39,11 @@ export default (points: Array<point>, {
   if (meta) {
 
     const meta = {};
-    meta.length = color ? 7 : 3;
+    meta.vertexLength = color ? 7 : 3;
+    meta.amount = vertices.length / meta.vertexLength;
     meta.position = {start: 0, length: 3};
     if (color) meta.color = {start: 3, length: 4};
-    return {vertices, meta};
+    return {data: vertices, meta};
 
   } else {
     return vertices;
