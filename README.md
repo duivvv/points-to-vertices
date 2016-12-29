@@ -39,6 +39,22 @@ console.log(vertices);
 Each point can have **x, y, z and color** (vec4, hex, rgb or rgba) properties
 <br/>`points-to-vertices` fills in the blanks with (provided) defaults.
 
+result is an array of vertices
+
+```js
+[
+
+  // point 1
+  1, 1, 1,      // x, y, z 
+  1, 0, 0, .3,  // r, g, b, a
+  
+  // point 2
+  1, -1, 0,     // x, y, z   
+  1, 0, 0, 1    // r, g, b, a
+  
+]
+```
+
 ### Installation
 
 Install via [yarn](https://github.com/yarnpkg/yarn)
