@@ -45,13 +45,13 @@ result is an array of vertices
 [
 
   // point 1
-  1, 1, 1,      // x, y, z 
+  1, 1, 1,      // x, y, z
   1, 0, 0, .3,  // r, g, b, a
-  
+
   // point 2
-  1, -1, 0,     // x, y, z   
+  1, -1, 0,     // x, y, z
   1, 0, 0, 1    // r, g, b, a
-  
+
 ]
 ```
 
@@ -111,31 +111,34 @@ example output with `meta: true` (annotated for clarity)
 
 ```js
 {
- 
-  vertices: [ 
-  
+
+  data: [
+
   	// point 1
   	0, 0, 1,     // position (x, y, z)
   	0, 1, 1, 1,  // color (r, g, b, a)
-  	
+
   	// point 2
   	1, - 1, 0,    // position (x, y, z)
   	0, 1, 1, 1   // color (r, g, b, a)
-  	
+
   ],
-  
-  meta: { 
-  
+
+  meta: {
+
    	// each vertex is 7 long
-   	length: 7,    	
-   	
+   	vertexLength: 7,
+
+    // there are 2 vertices in this array
+   	amount: 2,
+
    	// position is 3 long, starts at index 0
-    position: { start: 0, length: 3 }, 
-    
+    position: { start: 0, length: 3 },
+
     // color is 4 long, starts at index 3
-    color: { start: 3, length: 4 }   
-  } 
-  
+    color: { start: 3, length: 4 }
+  }
+
 }
 ```
 
