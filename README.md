@@ -7,7 +7,6 @@
 [![Travis](https://img.shields.io/travis/duivvv/points-to-vertices/master.svg?style=flat-square)](https://travis-ci.org/duivvv/points-to-vertices)
 [![David](https://img.shields.io/david/duivvv/points-to-vertices.svg?style=flat-square)](https://david-dm.org/duivvv/points-to-vertices)
 [![Coverage Status](https://img.shields.io/coveralls/duivvv/points-to-vertices.svg?style=flat-square)](https://coveralls.io/github/duivvv/points-to-vertices)
-
 [![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)](https://gitmoji.carloscuesta.me/)
 
 ### Usage
