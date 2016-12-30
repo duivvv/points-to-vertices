@@ -1,13 +1,13 @@
 # points-to-vertices
 
-> :white_square_button: a points to vertices array convertor
-
 ![Node](https://img.shields.io/node/v/points-to-vertices.svg?style=flat-square)
 [![NPM](https://img.shields.io/npm/v/points-to-vertices.svg?style=flat-square)](https://www.npmjs.com/package/points-to-vertices)
 [![Travis](https://img.shields.io/travis/duivvv/points-to-vertices/master.svg?style=flat-square)](https://travis-ci.org/duivvv/points-to-vertices)
 [![David](https://img.shields.io/david/duivvv/points-to-vertices.svg?style=flat-square)](https://david-dm.org/duivvv/points-to-vertices)
 [![Coverage Status](https://img.shields.io/coveralls/duivvv/points-to-vertices.svg?style=flat-square)](https://coveralls.io/github/duivvv/points-to-vertices)
 [![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)](https://gitmoji.carloscuesta.me/)
+
+> :white_square_button: a points to vertices array convertor
 
 ### Usage
 
